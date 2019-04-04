@@ -1,0 +1,25 @@
+org.eclipse.che.plugin.languageserver.ide.editor.LanguageServerReconcileStrategy 显示了如何加DocumentChangedHandler
+
+che/ide/che-core-ide-api/src/main/java/org/eclipse/che/ide/api/editor/events
+		TextChangedEvent
+
+ide/che-core-ide-app/src/main/resources/org/eclipse/che/ide/part/events-part-icon.svg
+ide/che-core-ide-app/src/main/java/org/eclipse/che/ide/Resources.java
+
+ProfileDto
+PreferenceManager
+
+AboutViewImpl
+@UiField 之前不能加private
+@Inject private CodenvyEditor
+
+che/ide/che-core-ide-app/src/main/java/org/eclipse/che/ide/actions/EditFileAction.java 
+
+che/ide/che-core-ide-app/src/main/java/org/eclipse/che/ide/core/StandardComponentInitializer.java 
+line 722   DefaultActionGroup resourceOperation = new DefaultActionGroup(actionManager);
+actionManager.registerAction("resourceOperation", resourceOperation);
+......
+resourceOperation.add(editFileAction);
+
+che/ide/che-core-ide-app/src/main/java/org/eclipse/che/ide/preference/PreferencesPresenter.java
+line 216  if(haveUnsavedData)
