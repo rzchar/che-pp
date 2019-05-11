@@ -23,3 +23,8 @@ resourceOperation.add(editFileAction);
 
 che/ide/che-core-ide-app/src/main/java/org/eclipse/che/ide/preference/PreferencesPresenter.java
 line 216  if(haveUnsavedData)
+
+java解析相关
+D:\MyPaper\che\plugins\plugin-java\che-plugin-java-server\src\main\java\org\eclipse\che\plugin\java\languageserver\JavaLanguageServerExtensionService.java
+D:\MyPaper\che\plugins\plugin-java\che-plugin-java-ext-lang-client\src\main\java\org\eclipse\che\ide\ext\java\client\service\JavaLanguageExtensionServiceClient.java
+
