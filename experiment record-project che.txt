@@ -1,0 +1,102 @@
+[sample1]triggered by right click
+[sample1]currentFileName=AnnotationGroup.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32821/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 35540ms.
+[sample1] serverAnalyzerCost : 35365
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+
+[sample1]triggered by right click
+[sample1]currentFileName=AnnotationGroup.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32821/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 12490ms.
+[sample1] serverAnalyzerCost : 12436
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+
+[sample1]triggered by right click
+[sample1]currentFileName=ApiException.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32833/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 33329ms.
+[sample1] serverAnalyzerCost : 33102
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+
+[sample1]triggered by right click
+[sample1]currentFileName=ApiException.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32833/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 15088ms.
+[sample1] serverAnalyzerCost : 14964
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+
+[sample1]triggered by right click
+[sample1]currentFileName=ApiException.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32833/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 13598ms.
+[sample1] serverAnalyzerCost : 13472
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+
+[sample1]triggered by right click
+[sample1]currentFileName=ApiException.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32833/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 13936ms.
+[sample1] serverAnalyzerCost : 13820
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+
+[sample1]triggered by right click
+[sample1]currentFileName=ApiException.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32833/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 13810ms.
+[sample1] serverAnalyzerCost : 13693
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+
+[sample1]triggered by right click
+[sample1]currentFileName=ApiException.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32773/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 31998ms.
+[sample1] serverAnalyzerCost : 31735
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+[sample1] fileAmount : 8433
+
+[sample1]triggered by right click
+[sample1]currentFileName=ApiException.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32773/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 8688ms.
+[sample1] serverAnalyzerCost : 8621
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+[sample1] fileAmount : 8433
+
+[sample1]triggered by right click
+[sample1]currentFileName=ApiException.java
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/che
+[sample1]url=http://172.17.0.1:32773/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/che
+[sample1][sample 1 server succeed] cost 20667ms.
+[sample1] serverAnalyzerCost : 20605
+[sample1] expressionAmount : 402612
+[sample1] methodAmount : 46394
+[sample1] fileAmount : 8433

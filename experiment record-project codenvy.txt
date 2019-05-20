@@ -1,0 +1,65 @@
+[sample1]triggered by right click
+[sample1]currentFileName=CHANGELOG.md
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/codenvy
+[sample1]url=http://172.17.0.1:32791/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/codenvy
+[sample1][sample 1 server succeed] cost 5720ms.
+[sample1] serverAnalyzerCost : 5658
+[sample1] expressionAmount : 26478
+[sample1] methodAmount : 2657
+[sample1] fileAmount : 517
+
+[sample1]triggered by right click
+[sample1]currentFileName=CHANGELOG.md
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/codenvy
+[sample1]url=http://172.17.0.1:32791/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/codenvy
+[sample1][sample 1 server succeed] cost 2016ms.
+[sample1] serverAnalyzerCost : 1994
+[sample1] expressionAmount : 26478
+[sample1] methodAmount : 2657
+[sample1] fileAmount : 517	
+
+[sample1]triggered by right click
+[sample1]currentFileName=CHANGELOG.md
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/codenvy
+[sample1]url=http://172.17.0.1:32791/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/codenvy
+[sample1][sample 1 server succeed] cost 1144ms.
+[sample1] serverAnalyzerCost : 1130
+[sample1] expressionAmount : 26478
+[sample1] methodAmount : 2657
+[sample1] fileAmount : 517
+
+[sample1]triggered by right click
+[sample1]currentFileName=CHANGELOG.md
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/codenvy
+[sample1]url=http://172.17.0.1:32791/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/codenvy
+[sample1][sample 1 server succeed] cost 924ms.
+[sample1] serverAnalyzerCost : 891
+[sample1] expressionAmount : 26478
+[sample1] methodAmount : 2657
+[sample1] fileAmount : 517
+
+[sample1]triggered by right click
+[sample1]currentFileName=CHANGELOG.md
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/codenvy
+[sample1]url=http://172.17.0.1:32791/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/codenvy
+[sample1][sample 1 server succeed] cost 568ms.
+[sample1] serverAnalyzerCost : 547
+[sample1] expressionAmount : 26478
+[sample1] methodAmount : 2657
+[sample1] fileAmount : 517
+
+[sample1]triggered by right click
+[sample1]currentFileName=CHANGELOG.md
+[sample1]workspace=workspaced3jz4u0e5lk46k9a
+[sample1]rootProject=/codenvy
+[sample1]url=http://172.17.0.1:32791/api/getFileLines/workspaced3jz4u0e5lk46k9a/ast/codenvy
+[sample1][sample 1 server succeed] cost 599ms.
+[sample1] serverAnalyzerCost : 584
+[sample1] expressionAmount : 26478
+[sample1] methodAmount : 2657
+[sample1] fileAmount : 517

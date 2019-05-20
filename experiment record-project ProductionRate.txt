@@ -1,0 +1,21 @@
+[sample1]triggered by right click
+[sample1]currentFileName=BasicSinglePeriodAnalyzer.java
+[sample1]workspace=workspace3zesm13p0egy43et
+[sample1]rootProject=/ProductionRate
+[sample1]url=http://172.17.0.1:32785/api/getFileLines/workspace3zesm13p0egy43et/ast/ProductionRate
+[sample1][sample 1 server succeed] cost 252ms.
+[sample1] serverAnalyzerCost : 167
+[sample1] expressionAmount : 1958
+[sample1] methodAmount : 246
+[sample1] fileAmount : 41
+
+[sample1]triggered by right click
+[sample1]currentFileName=BasicSinglePeriodAnalyzer.java
+[sample1]workspace=workspace3zesm13p0egy43et
+[sample1]rootProject=/ProductionRate
+[sample1]url=http://172.17.0.1:32785/api/getFileLines/workspace3zesm13p0egy43et/ast/ProductionRate
+[sample1][sample 1 server succeed] cost 216ms.
+[sample1] serverAnalyzerCost : 140
+[sample1] expressionAmount : 1958
+[sample1] methodAmount : 246
+[sample1] fileAmount : 41
