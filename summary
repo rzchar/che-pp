@@ -31,7 +31,23 @@ D:\MyPaper\che\plugins\plugin-java\che-plugin-java-ext-lang-client\src\main\java
 
 configureChangeInterceptors
 
-功能管理
 
 
+第五章加：
+本文分析了包含××类statement 和××类Expression
+本文使用Eclipse的org.eclipse.jdt.core.dom下的结构对AST的进行了
+因此下文中提到的AST中的Expression和Statement的描述和定义参照org.eclipse.jdt.core.dom包中的Expression类和Statement类，具体分类参照上述两类子类，共有34类Expression和22类Statement。
 
+
+第六章加：
+测试目的//
+分析了如下项目
+
+在Eclipse Che系统繁忙时，所花费的时间
+列表
+
+在Eclipse Che空闲时，所花费的时间
+
+列表
+
+Expression 和 Statement数量与时间关系图。
