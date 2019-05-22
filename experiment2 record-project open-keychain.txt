@@ -1,0 +1,43 @@
+[sample1]triggered by right click
+[sample1]currentFileName=LICENSE
+[sample1]workspace=workspacebjjeqe4rcnwupx97
+[sample1]rootProject=/open-keychain
+[sample1]url=http://172.17.0.1:32785/api/getFileLines/workspacebjjeqe4rcnwupx97/ast/open-keychain
+[sample1][sample 1 server succeed] cost 1907ms.
+[sample1] serverAnalyzerCost : 1896
+[sample1] expressionAmount : 61878
+[sample1] methodAmount : 4270
+[sample1] fileAmount : 579
+
+[sample1]triggered by right click
+[sample1]currentFileName=LICENSE
+[sample1]workspace=workspacebjjeqe4rcnwupx97
+[sample1]rootProject=/open-keychain
+[sample1]url=http://172.17.0.1:32785/api/getFileLines/workspacebjjeqe4rcnwupx97/ast/open-keychain
+[sample1][sample 1 server succeed] cost 1533ms.
+[sample1] serverAnalyzerCost : 1511
+[sample1] expressionAmount : 61878
+[sample1] methodAmount : 4270
+[sample1] fileAmount : 579
+
+[sample1]triggered by right click
+[sample1]currentFileName=LICENSE
+[sample1]workspace=workspacebjjeqe4rcnwupx97
+[sample1]rootProject=/open-keychain
+[sample1]url=http://172.17.0.1:32785/api/getFileLines/workspacebjjeqe4rcnwupx97/ast/open-keychain
+[sample1][sample 1 server succeed] cost 1533ms.
+[sample1] serverAnalyzerCost : 1511
+[sample1] expressionAmount : 61878
+[sample1] methodAmount : 4270
+[sample1] fileAmount : 579
+
+[sample1]triggered by right click
+[sample1]currentFileName=LICENSE
+[sample1]workspace=workspacebjjeqe4rcnwupx97
+[sample1]rootProject=/open-keychain
+[sample1]url=http://172.17.0.1:32785/api/getFileLines/workspacebjjeqe4rcnwupx97/ast/open-keychain
+[sample1][sample 1 server succeed] cost 1533ms.
+[sample1] serverAnalyzerCost : 1511
+[sample1] expressionAmount : 61878
+[sample1] methodAmount : 4270
+[sample1] fileAmount : 579
