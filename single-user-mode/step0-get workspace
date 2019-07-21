@@ -1,0 +1,14 @@
+"name": "get workspace",
+"request": {
+	"method": "GET",
+	"header": [],
+	"url": {
+		"raw": "http://172.17.0.1:8080/api/workspace?status=running",
+		"protocol": "http",
+		"host": ["172", "17", "0", "1"],
+		"port": "8080",
+		"path": ["api", "workspace"],
+		"query": [{"key": "status", "value": "running"}]
+	},
+	"description": "get running workspace"
+}

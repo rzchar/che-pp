@@ -1,0 +1,481 @@
+{
+	"info": {
+		"_postman_id": "3b611a43-753c-4223-a9f2-e908b654580e",
+		"name": "eclipse che workspace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get workspace",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.0.1:8080/api/workspace?status=running",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"workspace"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "running"
+						}
+					]
+				},
+				"description": "get running workspace"
+			},
+			"response": [
+				{
+					"name": "http://172.17.0.1:8080/api/workspace?status=running",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://172.17.0.1:8080/api/workspace?status=running",
+							"protocol": "http",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"workspace"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "running"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "JAXRS-Body-Provided"
+						},
+						{
+							"key": "Link",
+							"value": "<http://172.17.0.1:8080/api/workspace?status=running&skipCount=0&maxItems=30>; rel=\"first\", <http://172.17.0.1:8080/api/workspace?status=running&skipCount=0&maxItems=30>; rel=\"last\""
+						},
+						{
+							"key": "ETag",
+							"value": "\"c3d1caee70c02559050d4ef0cf1345d0\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, no-cache, no-store, no-transform"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jul 2019 03:00:43 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"namespace\": \"che\",\n        \"status\": \"RUNNING\",\n        \"config\": {\n            \"environments\": {\n                \"default\": {\n                    \"recipe\": {\n                        \"type\": \"dockerimage\",\n                        \"content\": \"eclipse/ubuntu_jdk8\"\n                    },\n                    \"machines\": {\n                        \"dev-machine\": {\n                            \"env\": {},\n                            \"servers\": {\n                                \"tomcat8-debug\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"8000\"\n                                },\n                                \"codeserver\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"9876\"\n                                },\n                                \"tomcat8\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"8080\"\n                                }\n                            },\n                            \"installers\": [\n                                \"org.eclipse.che.exec\",\n                                \"org.eclipse.che.terminal\",\n                                \"org.eclipse.che.ws-agent\",\n                                \"org.eclipse.che.ls.java\"\n                            ],\n                            \"volumes\": {\n                                \"m2\": {\n                                    \"path\": \"/home/user/.m2\"\n                                },\n                                \"javadata\": {\n                                    \"path\": \"/home/user/jdtls/data\"\n                                }\n                            },\n                            \"attributes\": {\n                                \"memoryLimitBytes\": \"2147483648\"\n                            }\n                        }\n                    }\n                }\n            },\n            \"projects\": [\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/rzchar/ProductionRate.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"ProductionRate\",\n                    \"type\": \"blank\",\n                    \"path\": \"/ProductionRate\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/Netflix/astyanax.git\",\n                        \"type\": \"github\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"astyanax\",\n                    \"type\": \"blank\",\n                    \"path\": \"/astyanax\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"codenvy\",\n                    \"type\": \"blank\",\n                    \"path\": \"/codenvy\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/joelittlejohn/jsonschema2pojo.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"jsonschema2pojo\",\n                    \"type\": \"blank\",\n                    \"path\": \"/jsonschema2pojo\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/open-keychain/open-keychain.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"/open-keychain\",\n                    \"type\": \"blank\",\n                    \"path\": \"/open-keychain\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/TheAlgorithms/Java.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"Java\",\n                    \"type\": \"blank\",\n                    \"path\": \"/Java\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"cache-client\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/cache-client\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"http-api\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/http-api\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runelite-mixins\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runelite-mixins\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runescape-api\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runescape-api\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"protocol\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/protocol\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runelite-script-assembler-plugin\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runelite-script-assembler-plugin\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"cache-updater\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/cache-updater\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"http-service\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/http-service\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runelite-client\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runelite-client\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"cache\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/cache\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"protocol-api\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/protocol-api\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runelite-api\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runelite-api\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/vojtechhabarta/typescript-generator.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"typescript-generator\",\n                    \"type\": \"blank\",\n                    \"path\": \"/typescript-generator\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/techdev-solutions/trackr-backend.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"/trackr-backend\",\n                    \"type\": \"blank\",\n                    \"path\": \"/trackr-backend\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/apache/incubator-zipkin-brave.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"/incubator-zipkin-brave\",\n                    \"type\": \"blank\",\n                    \"path\": \"/incubator-zipkin-brave\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/runelite/runelite.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"runelite\",\n                    \"type\": \"blank\",\n                    \"path\": \"/runelite\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                }\n            ],\n            \"commands\": [\n                {\n                    \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n                    \"name\": \"build\",\n                    \"type\": \"mvn\",\n                    \"attributes\": {\n                        \"goal\": \"Build\",\n                        \"previewUrl\": \"\"\n                    }\n                },\n                {\n                    \"commandLine\": \"echo \\\"hello\\\"\",\n                    \"name\": \"newCustom\",\n                    \"type\": \"custom\",\n                    \"attributes\": {\n                        \"goal\": \"Run\",\n                        \"previewUrl\": \"\"\n                    }\n                }\n            ],\n            \"defaultEnv\": \"default\",\n            \"name\": \"ast-tree-test2\",\n            \"attributes\": {},\n            \"links\": []\n        },\n        \"links\": {},\n        \"temporary\": false,\n        \"id\": \"workspace3zesm13p0egy43et\",\n        \"attributes\": {\n            \"org.eclipse.che.runtimes_id\": \"runtimes2uj7kbty0fozqc6y\",\n            \"updated\": \"1563498534884\",\n            \"created\": \"1558269728374\",\n            \"stackId\": \"java-default\"\n        }\n    },\n    {\n        \"namespace\": \"che\",\n        \"status\": \"RUNNING\",\n        \"config\": {\n            \"environments\": {\n                \"default\": {\n                    \"recipe\": {\n                        \"type\": \"dockerimage\",\n                        \"content\": \"eclipse/ubuntu_jdk8\"\n                    },\n                    \"machines\": {\n                        \"dev-machine\": {\n                            \"env\": {},\n                            \"servers\": {\n                                \"tomcat8-debug\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"8000\"\n                                },\n                                \"codeserver\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"9876\"\n                                },\n                                \"tomcat8\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"8080\"\n                                }\n                            },\n                            \"installers\": [\n                                \"org.eclipse.che.exec\",\n                                \"org.eclipse.che.terminal\",\n                                \"org.eclipse.che.ws-agent\",\n                                \"org.eclipse.che.ls.java\"\n                            ],\n                            \"volumes\": {\n                                \"m2\": {\n                                    \"path\": \"/home/user/.m2\"\n                                },\n                                \"javadata\": {\n                                    \"path\": \"/home/user/jdtls/data\"\n                                }\n                            },\n                            \"attributes\": {\n                                \"memoryLimitBytes\": \"2147483648\"\n                            }\n                        }\n                    }\n                }\n            },\n            \"projects\": [\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/looly/hutool.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"hutool\",\n                    \"type\": \"blank\",\n                    \"path\": \"/hutool\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"v4-master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-all\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-all\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-aop\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-aop\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-log\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-log\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-bloomFilter\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-bloomFilter\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-cron\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-cron\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-setting\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-setting\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-dfa\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-dfa\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-poi\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-poi\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-db\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-db\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-socket\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-socket\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-extra\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-extra\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-cache\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-cache\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-core\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-core\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-script\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-script\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-json\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-json\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-http\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-http\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-captcha\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-captcha\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-system\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-system\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-crypto\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-crypto\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"http://git.trustie.net/hudongyang/che_test.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"/che_test\",\n                    \"type\": \"blank\",\n                    \"path\": \"/che_test\",\n                    \"attributes\": {}\n                }\n            ],\n            \"commands\": [\n                {\n                    \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n                    \"name\": \"build\",\n                    \"type\": \"mvn\",\n                    \"attributes\": {\n                        \"goal\": \"Build\",\n                        \"previewUrl\": \"\"\n                    }\n                }\n            ],\n            \"defaultEnv\": \"default\",\n            \"name\": \"small-test\",\n            \"attributes\": {},\n            \"links\": []\n        },\n        \"links\": {},\n        \"temporary\": false,\n        \"id\": \"workspacebjjeqe4rcnwupx97\",\n        \"attributes\": {\n            \"org.eclipse.che.runtimes_id\": \"runtimes2q9uldl4n0gcm8nx\",\n            \"updated\": \"1563499483451\",\n            \"created\": \"1558493154115\",\n            \"stackId\": \"java-default\"\n        }\n    }\n]"
+				},
+				{
+					"name": "http://172.17.0.1:8080/api/workspace?status=running",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://172.17.0.1:8080/api/workspace?status=running",
+							"protocol": "http",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"workspace"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "running"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "JAXRS-Body-Provided"
+						},
+						{
+							"key": "Link",
+							"value": "<http://172.17.0.1:8080/api/workspace?status=running&skipCount=0&maxItems=30>; rel=\"first\", <http://172.17.0.1:8080/api/workspace?status=running&skipCount=0&maxItems=30>; rel=\"last\""
+						},
+						{
+							"key": "ETag",
+							"value": "\"c3d1caee70c02559050d4ef0cf1345d0\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, no-cache, no-store, no-transform"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jul 2019 03:00:43 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"namespace\": \"che\",\n        \"status\": \"RUNNING\",\n        \"config\": {\n            \"environments\": {\n                \"default\": {\n                    \"recipe\": {\n                        \"type\": \"dockerimage\",\n                        \"content\": \"eclipse/ubuntu_jdk8\"\n                    },\n                    \"machines\": {\n                        \"dev-machine\": {\n                            \"env\": {},\n                            \"servers\": {\n                                \"tomcat8-debug\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"8000\"\n                                },\n                                \"codeserver\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"9876\"\n                                },\n                                \"tomcat8\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"8080\"\n                                }\n                            },\n                            \"installers\": [\n                                \"org.eclipse.che.exec\",\n                                \"org.eclipse.che.terminal\",\n                                \"org.eclipse.che.ws-agent\",\n                                \"org.eclipse.che.ls.java\"\n                            ],\n                            \"volumes\": {\n                                \"m2\": {\n                                    \"path\": \"/home/user/.m2\"\n                                },\n                                \"javadata\": {\n                                    \"path\": \"/home/user/jdtls/data\"\n                                }\n                            },\n                            \"attributes\": {\n                                \"memoryLimitBytes\": \"2147483648\"\n                            }\n                        }\n                    }\n                }\n            },\n            \"projects\": [\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/rzchar/ProductionRate.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"ProductionRate\",\n                    \"type\": \"blank\",\n                    \"path\": \"/ProductionRate\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/Netflix/astyanax.git\",\n                        \"type\": \"github\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"astyanax\",\n                    \"type\": \"blank\",\n                    \"path\": \"/astyanax\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"codenvy\",\n                    \"type\": \"blank\",\n                    \"path\": \"/codenvy\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/joelittlejohn/jsonschema2pojo.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"jsonschema2pojo\",\n                    \"type\": \"blank\",\n                    \"path\": \"/jsonschema2pojo\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/open-keychain/open-keychain.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"/open-keychain\",\n                    \"type\": \"blank\",\n                    \"path\": \"/open-keychain\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/TheAlgorithms/Java.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"Java\",\n                    \"type\": \"blank\",\n                    \"path\": \"/Java\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"cache-client\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/cache-client\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"http-api\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/http-api\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runelite-mixins\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runelite-mixins\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runescape-api\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runescape-api\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"protocol\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/protocol\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runelite-script-assembler-plugin\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runelite-script-assembler-plugin\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"cache-updater\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/cache-updater\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"http-service\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/http-service\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runelite-client\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runelite-client\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"cache\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/cache\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"protocol-api\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/protocol-api\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"runelite-api\",\n                    \"type\": \"maven\",\n                    \"path\": \"/runelite/runelite-api\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/vojtechhabarta/typescript-generator.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"typescript-generator\",\n                    \"type\": \"blank\",\n                    \"path\": \"/typescript-generator\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/techdev-solutions/trackr-backend.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"/trackr-backend\",\n                    \"type\": \"blank\",\n                    \"path\": \"/trackr-backend\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/apache/incubator-zipkin-brave.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"/incubator-zipkin-brave\",\n                    \"type\": \"blank\",\n                    \"path\": \"/incubator-zipkin-brave\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/runelite/runelite.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"runelite\",\n                    \"type\": \"blank\",\n                    \"path\": \"/runelite\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"master\"\n                        ]\n                    }\n                }\n            ],\n            \"commands\": [\n                {\n                    \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n                    \"name\": \"build\",\n                    \"type\": \"mvn\",\n                    \"attributes\": {\n                        \"goal\": \"Build\",\n                        \"previewUrl\": \"\"\n                    }\n                },\n                {\n                    \"commandLine\": \"echo \\\"hello\\\"\",\n                    \"name\": \"newCustom\",\n                    \"type\": \"custom\",\n                    \"attributes\": {\n                        \"goal\": \"Run\",\n                        \"previewUrl\": \"\"\n                    }\n                }\n            ],\n            \"defaultEnv\": \"default\",\n            \"name\": \"ast-tree-test2\",\n            \"attributes\": {},\n            \"links\": []\n        },\n        \"links\": {},\n        \"temporary\": false,\n        \"id\": \"workspace3zesm13p0egy43et\",\n        \"attributes\": {\n            \"org.eclipse.che.runtimes_id\": \"runtimes2uj7kbty0fozqc6y\",\n            \"updated\": \"1563498534884\",\n            \"created\": \"1558269728374\",\n            \"stackId\": \"java-default\"\n        }\n    },\n    {\n        \"namespace\": \"che\",\n        \"status\": \"RUNNING\",\n        \"config\": {\n            \"environments\": {\n                \"default\": {\n                    \"recipe\": {\n                        \"type\": \"dockerimage\",\n                        \"content\": \"eclipse/ubuntu_jdk8\"\n                    },\n                    \"machines\": {\n                        \"dev-machine\": {\n                            \"env\": {},\n                            \"servers\": {\n                                \"tomcat8-debug\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"8000\"\n                                },\n                                \"codeserver\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"9876\"\n                                },\n                                \"tomcat8\": {\n                                    \"attributes\": {},\n                                    \"protocol\": \"http\",\n                                    \"port\": \"8080\"\n                                }\n                            },\n                            \"installers\": [\n                                \"org.eclipse.che.exec\",\n                                \"org.eclipse.che.terminal\",\n                                \"org.eclipse.che.ws-agent\",\n                                \"org.eclipse.che.ls.java\"\n                            ],\n                            \"volumes\": {\n                                \"m2\": {\n                                    \"path\": \"/home/user/.m2\"\n                                },\n                                \"javadata\": {\n                                    \"path\": \"/home/user/jdtls/data\"\n                                }\n                            },\n                            \"attributes\": {\n                                \"memoryLimitBytes\": \"2147483648\"\n                            }\n                        }\n                    }\n                }\n            },\n            \"projects\": [\n                {\n                    \"source\": {\n                        \"location\": \"https://github.com/looly/hutool.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [\n                        \"pullrequest\"\n                    ],\n                    \"name\": \"hutool\",\n                    \"type\": \"blank\",\n                    \"path\": \"/hutool\",\n                    \"attributes\": {\n                        \"contribute_to_branch\": [\n                            \"v4-master\"\n                        ]\n                    }\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-all\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-all\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-aop\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-aop\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-log\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-log\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-bloomFilter\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-bloomFilter\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-cron\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-cron\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-setting\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-setting\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-dfa\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-dfa\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-poi\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-poi\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-db\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-db\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-socket\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-socket\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-extra\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-extra\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-cache\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-cache\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-core\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-core\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-script\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-script\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-json\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-json\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-http\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-http\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-captcha\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-captcha\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-system\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-system\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"hutool-crypto\",\n                    \"type\": \"maven\",\n                    \"path\": \"/hutool/hutool-crypto\",\n                    \"attributes\": {}\n                },\n                {\n                    \"source\": {\n                        \"location\": \"http://git.trustie.net/hudongyang/che_test.git\",\n                        \"type\": \"git\",\n                        \"parameters\": {}\n                    },\n                    \"links\": [],\n                    \"problems\": [],\n                    \"mixins\": [],\n                    \"name\": \"/che_test\",\n                    \"type\": \"blank\",\n                    \"path\": \"/che_test\",\n                    \"attributes\": {}\n                }\n            ],\n            \"commands\": [\n                {\n                    \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n                    \"name\": \"build\",\n                    \"type\": \"mvn\",\n                    \"attributes\": {\n                        \"goal\": \"Build\",\n                        \"previewUrl\": \"\"\n                    }\n                }\n            ],\n            \"defaultEnv\": \"default\",\n            \"name\": \"small-test\",\n            \"attributes\": {},\n            \"links\": []\n        },\n        \"links\": {},\n        \"temporary\": false,\n        \"id\": \"workspacebjjeqe4rcnwupx97\",\n        \"attributes\": {\n            \"org.eclipse.che.runtimes_id\": \"runtimes2q9uldl4n0gcm8nx\",\n            \"updated\": \"1563499483451\",\n            \"created\": \"1558493154115\",\n            \"stackId\": \"java-default\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "create workspace with git",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"attributes\": {\n    },\n    \"description\": \"string\",\n    \"environments\": {\n        \"default\": {\n            \"recipe\": {\n                \"type\": \"dockerimage\",\n                \"content\": \"eclipse/ubuntu_jdk8\"\n            },\n            \"machines\": {\n                \"dev-machine\": {\n                    \"env\": {},\n                    \"servers\": {\n                        \"tomcat8-debug\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"8000\"\n                        },\n                        \"codeserver\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"9876\"\n                        },\n                        \"tomcat8\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"8080\"\n                        }\n                    },\n                    \"installers\": [\n                        \"org.eclipse.che.exec\",\n                        \"org.eclipse.che.terminal\",\n                        \"org.eclipse.che.ws-agent\",\n                        \"org.eclipse.che.ls.java\"\n                    ],\n                    \"volumes\": {\n                        \"m2\": {\n                            \"path\": \"/home/user/.m2\"\n                        },\n                        \"javadata\": {\n                            \"path\": \"/home/user/jdtls/data\"\n                        }\n                    },\n                    \"attributes\": {\n                        \"memoryLimitBytes\": \"2147483648\"\n                    }\n                }\n            }\n        }\n    },\n    \"projects\": [\n        {\n            \"source\": {\n                \"location\": \"https://github.com/looly/hutool.git\",\n                \"type\": \"git\",\n                \"parameters\": {}\n            },\n            \"links\": [],\n            \"problems\": [],\n            \"mixins\": [\n                \"pullrequest\"\n            ],\n            \"name\": \"hutool\",\n            \"type\": \"blank\",\n            \"path\": \"/hutool\",\n            \"attributes\": {\n                \"contribute_to_branch\": [\n                    \"v4-master\"\n                ]\n            }\n        }\n    ],\n    \"commands\": [\n        {\n            \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n            \"name\": \"build\",\n            \"attributes\": {\n                \"goal\": \"Build\",\n                \"previewUrl\": \"\"\n            },\n            \"type\": \"mvn\"\n        },\n        {\n            \"commandLine\": \"echo \\\"hello\\\"\",\n            \"name\": \"newCustom\",\n            \"attributes\": {\n                \"goal\": \"Run\",\n                \"previewUrl\": \"\"\n            },\n            \"type\": \"custom\"\n        }\n    ],\n    \"defaultEnv\": \"default\",\n    \"name\": \"create-from-api\",\n    \"links\": []\n}"
+				},
+				"url": {
+					"raw": "http://172.17.0.1:8080/api/workspace?start-after-create=true&attribute=stackId:java-default",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"workspace"
+					],
+					"query": [
+						{
+							"key": "start-after-create",
+							"value": "true"
+						},
+						{
+							"key": "attribute",
+							"value": "stackId:java-default"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "succeed with 201",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"attributes\": {},\n    \"description\": \"string\",\n    \"environments\": {\n        \"default\": {\n            \"recipe\": {\n                \"type\": \"dockerimage\",\n                \"content\": \"eclipse/ubuntu_jdk8\"\n            },\n            \"machines\": {\n                \"dev-machine\": {\n                    \"env\": {},\n                    \"servers\": {\n                        \"tomcat8-debug\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"8000\"\n                        },\n                        \"codeserver\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"9876\"\n                        },\n                        \"tomcat8\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"8080\"\n                        }\n                    },\n                    \"installers\": [\n                        \"org.eclipse.che.exec\",\n                        \"org.eclipse.che.terminal\",\n                        \"org.eclipse.che.ws-agent\",\n                        \"org.eclipse.che.ls.java\"\n                    ],\n                    \"volumes\": {\n                        \"m2\": {\n                            \"path\": \"/home/user/.m2\"\n                        },\n                        \"javadata\": {\n                            \"path\": \"/home/user/jdtls/data\"\n                        }\n                    },\n                    \"attributes\": {\n                        \"memoryLimitBytes\": \"2147483648\"\n                    }\n                }\n            }\n        }\n    },\n    \"projects\": [\n        {\n            \"source\": {\n                \"location\": \"https://github.com/looly/hutool.git\",\n                \"type\": \"git\",\n                \"parameters\": {}\n            },\n            \"links\": [],\n            \"problems\": [],\n            \"mixins\": [\n                \"pullrequest\"\n            ],\n            \"name\": \"hutool\",\n            \"type\": \"blank\",\n            \"path\": \"/hutool\",\n            \"attributes\": {\n                \"contribute_to_branch\": [\n                    \"v4-master\"\n                ]\n            }\n        }\n    ],\n    \"commands\": [\n            {\n                \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n                \"name\": \"build\",\n                \"attributes\": {\n                    \"goal\": \"Build\",\n                    \"previewUrl\": \"\"\n                },\n                \"type\": \"mvn\"\n            },\n            {\n                \"commandLine\": \"echo \\\"hello\\\"\",\n                \"name\": \"newCustom\",\n                \"attributes\": {\n                    \"goal\": \"Run\",\n                    \"previewUrl\": \"\"\n                },\n                \"type\": \"custom\"\n            }\n        ],\n    \"defaultEnv\": \"default\",\n    \"name\": \"create-from-api\",\n    \"links\": []\n}"
+						},
+						"url": {
+							"raw": "http://172.17.0.1:8080/api/workspace",
+							"protocol": "http",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"workspace"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "JAXRS-Body-Provided"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "JSESSIONID=3FDF278277F751E9CDF274BE1B688F30; Path=/api; HttpOnly"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, no-cache, no-store, no-transform"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1472"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jul 2019 05:28:08 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"links\": {\n        \"self\": \"http://172.17.0.1:8080/api/workspace/workspace9plxkuuheudxmeqj\",\n        \"ide\": \"http://172.17.0.1:8080/che/create-from-api\"\n    },\n    \"attributes\": {\n        \"created\": \"1563514088385\"\n    },\n    \"namespace\": \"che\",\n    \"temporary\": false,\n    \"id\": \"workspace9plxkuuheudxmeqj\",\n    \"status\": \"STOPPED\",\n    \"config\": {\n        \"defaultEnv\": \"default\",\n        \"environments\": {\n            \"default\": {\n                \"machines\": {\n                    \"dev-machine\": {\n                        \"attributes\": {\n                            \"memoryLimitBytes\": \"2147483648\"\n                        },\n                        \"servers\": {\n                            \"tomcat8-debug\": {\n                                \"attributes\": {},\n                                \"port\": \"8000\",\n                                \"protocol\": \"http\"\n                            },\n                            \"codeserver\": {\n                                \"attributes\": {},\n                                \"port\": \"9876\",\n                                \"protocol\": \"http\"\n                            },\n                            \"tomcat8\": {\n                                \"attributes\": {},\n                                \"port\": \"8080\",\n                                \"protocol\": \"http\"\n                            }\n                        },\n                        \"volumes\": {\n                            \"m2\": {\n                                \"path\": \"/home/user/.m2\"\n                            },\n                            \"javadata\": {\n                                \"path\": \"/home/user/jdtls/data\"\n                            }\n                        },\n                        \"installers\": [\n                            \"org.eclipse.che.exec\",\n                            \"org.eclipse.che.terminal\",\n                            \"org.eclipse.che.ws-agent\",\n                            \"org.eclipse.che.ls.java\"\n                        ],\n                        \"env\": {}\n                    }\n                },\n                \"recipe\": {\n                    \"type\": \"dockerimage\",\n                    \"content\": \"eclipse/ubuntu_jdk8\"\n                }\n            }\n        },\n        \"projects\": [\n            {\n                \"links\": [],\n                \"name\": \"hutool\",\n                \"attributes\": {\n                    \"contribute_to_branch\": [\n                        \"v4-master\"\n                    ]\n                },\n                \"type\": \"blank\",\n                \"source\": {\n                    \"location\": \"https://github.com/looly/hutool.git\",\n                    \"type\": \"git\",\n                    \"parameters\": {}\n                },\n                \"path\": \"/hutool\",\n                \"problems\": [],\n                \"mixins\": [\n                    \"pullrequest\"\n                ]\n            }\n        ],\n        \"name\": \"create-from-api\",\n        \"attributes\": {},\n        \"description\": \"string\",\n        \"commands\": [\n            {\n                \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n                \"name\": \"build\",\n                \"attributes\": {\n                    \"goal\": \"Build\",\n                    \"previewUrl\": \"\"\n                },\n                \"type\": \"mvn\"\n            },\n            {\n                \"commandLine\": \"echo \\\"hello\\\"\",\n                \"name\": \"newCustom\",\n                \"attributes\": {\n                    \"goal\": \"Run\",\n                    \"previewUrl\": \"\"\n                },\n                \"type\": \"custom\"\n            }\n        ],\n        \"links\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "create temp workspace with git",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"attributes\": {\n    },\n    \"description\": \"string\",\n    \"environments\": {\n        \"default\": {\n            \"recipe\": {\n                \"type\": \"dockerimage\",\n                \"content\": \"eclipse/ubuntu_jdk8\"\n            },\n            \"machines\": {\n                \"dev-machine\": {\n                    \"env\": {},\n                    \"servers\": {\n                        \"tomcat8-debug\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"8000\"\n                        },\n                        \"codeserver\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"9876\"\n                        },\n                        \"tomcat8\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"8080\"\n                        }\n                    },\n                    \"installers\": [\n                        \"org.eclipse.che.exec\",\n                        \"org.eclipse.che.terminal\",\n                        \"org.eclipse.che.ws-agent\",\n                        \"org.eclipse.che.ls.java\"\n                    ],\n                    \"volumes\": {\n                        \"m2\": {\n                            \"path\": \"/home/user/.m2\"\n                        },\n                        \"javadata\": {\n                            \"path\": \"/home/user/jdtls/data\"\n                        }\n                    },\n                    \"attributes\": {\n                        \"memoryLimitBytes\": \"2147483648\"\n                    }\n                }\n            }\n        }\n    },\n    \"projects\": [\n        {\n            \"source\": {\n                \"location\": \"https://github.com/looly/hutool.git\",\n                \"type\": \"git\",\n                \"parameters\": {}\n            },\n            \"links\": [],\n            \"problems\": [],\n            \"mixins\": [\n                \"pullrequest\"\n            ],\n            \"name\": \"hutool\",\n            \"type\": \"blank\",\n            \"path\": \"/hutool\",\n            \"attributes\": {\n                \"contribute_to_branch\": [\n                    \"v4-master\"\n                ]\n            }\n        }\n    ],\n    \"commands\": [\n        {\n            \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n            \"name\": \"build\",\n            \"attributes\": {\n                \"goal\": \"Build\",\n                \"previewUrl\": \"\"\n            },\n            \"type\": \"mvn\"\n        },\n        {\n            \"commandLine\": \"echo \\\"hello\\\"\",\n            \"name\": \"newCustom\",\n            \"attributes\": {\n                \"goal\": \"Run\",\n                \"previewUrl\": \"\"\n            },\n            \"type\": \"custom\"\n        }\n    ],\n    \"defaultEnv\": \"default\",\n    \"name\": \"create-from-api\",\n    \"links\": []\n}"
+				},
+				"url": {
+					"raw": "http://172.17.0.1:8080/api/workspace/runtime?temporary=true&attribute=stackId:java-default",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"workspace",
+						"runtime"
+					],
+					"query": [
+						{
+							"key": "temporary",
+							"value": "true"
+						},
+						{
+							"key": "attribute",
+							"value": "stackId:java-default"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "succeed with 201",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"attributes\": {},\n    \"description\": \"string\",\n    \"environments\": {\n        \"default\": {\n            \"recipe\": {\n                \"type\": \"dockerimage\",\n                \"content\": \"eclipse/ubuntu_jdk8\"\n            },\n            \"machines\": {\n                \"dev-machine\": {\n                    \"env\": {},\n                    \"servers\": {\n                        \"tomcat8-debug\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"8000\"\n                        },\n                        \"codeserver\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"9876\"\n                        },\n                        \"tomcat8\": {\n                            \"attributes\": {},\n                            \"protocol\": \"http\",\n                            \"port\": \"8080\"\n                        }\n                    },\n                    \"installers\": [\n                        \"org.eclipse.che.exec\",\n                        \"org.eclipse.che.terminal\",\n                        \"org.eclipse.che.ws-agent\",\n                        \"org.eclipse.che.ls.java\"\n                    ],\n                    \"volumes\": {\n                        \"m2\": {\n                            \"path\": \"/home/user/.m2\"\n                        },\n                        \"javadata\": {\n                            \"path\": \"/home/user/jdtls/data\"\n                        }\n                    },\n                    \"attributes\": {\n                        \"memoryLimitBytes\": \"2147483648\"\n                    }\n                }\n            }\n        }\n    },\n    \"projects\": [\n        {\n            \"source\": {\n                \"location\": \"https://github.com/looly/hutool.git\",\n                \"type\": \"git\",\n                \"parameters\": {}\n            },\n            \"links\": [],\n            \"problems\": [],\n            \"mixins\": [\n                \"pullrequest\"\n            ],\n            \"name\": \"hutool\",\n            \"type\": \"blank\",\n            \"path\": \"/hutool\",\n            \"attributes\": {\n                \"contribute_to_branch\": [\n                    \"v4-master\"\n                ]\n            }\n        }\n    ],\n    \"commands\": [\n            {\n                \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n                \"name\": \"build\",\n                \"attributes\": {\n                    \"goal\": \"Build\",\n                    \"previewUrl\": \"\"\n                },\n                \"type\": \"mvn\"\n            },\n            {\n                \"commandLine\": \"echo \\\"hello\\\"\",\n                \"name\": \"newCustom\",\n                \"attributes\": {\n                    \"goal\": \"Run\",\n                    \"previewUrl\": \"\"\n                },\n                \"type\": \"custom\"\n            }\n        ],\n    \"defaultEnv\": \"default\",\n    \"name\": \"create-from-api\",\n    \"links\": []\n}"
+						},
+						"url": {
+							"raw": "http://172.17.0.1:8080/api/workspace",
+							"protocol": "http",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"workspace"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "JAXRS-Body-Provided"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "JSESSIONID=3FDF278277F751E9CDF274BE1B688F30; Path=/api; HttpOnly"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, no-cache, no-store, no-transform"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1472"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jul 2019 05:28:08 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"links\": {\n        \"self\": \"http://172.17.0.1:8080/api/workspace/workspace9plxkuuheudxmeqj\",\n        \"ide\": \"http://172.17.0.1:8080/che/create-from-api\"\n    },\n    \"attributes\": {\n        \"created\": \"1563514088385\"\n    },\n    \"namespace\": \"che\",\n    \"temporary\": false,\n    \"id\": \"workspace9plxkuuheudxmeqj\",\n    \"status\": \"STOPPED\",\n    \"config\": {\n        \"defaultEnv\": \"default\",\n        \"environments\": {\n            \"default\": {\n                \"machines\": {\n                    \"dev-machine\": {\n                        \"attributes\": {\n                            \"memoryLimitBytes\": \"2147483648\"\n                        },\n                        \"servers\": {\n                            \"tomcat8-debug\": {\n                                \"attributes\": {},\n                                \"port\": \"8000\",\n                                \"protocol\": \"http\"\n                            },\n                            \"codeserver\": {\n                                \"attributes\": {},\n                                \"port\": \"9876\",\n                                \"protocol\": \"http\"\n                            },\n                            \"tomcat8\": {\n                                \"attributes\": {},\n                                \"port\": \"8080\",\n                                \"protocol\": \"http\"\n                            }\n                        },\n                        \"volumes\": {\n                            \"m2\": {\n                                \"path\": \"/home/user/.m2\"\n                            },\n                            \"javadata\": {\n                                \"path\": \"/home/user/jdtls/data\"\n                            }\n                        },\n                        \"installers\": [\n                            \"org.eclipse.che.exec\",\n                            \"org.eclipse.che.terminal\",\n                            \"org.eclipse.che.ws-agent\",\n                            \"org.eclipse.che.ls.java\"\n                        ],\n                        \"env\": {}\n                    }\n                },\n                \"recipe\": {\n                    \"type\": \"dockerimage\",\n                    \"content\": \"eclipse/ubuntu_jdk8\"\n                }\n            }\n        },\n        \"projects\": [\n            {\n                \"links\": [],\n                \"name\": \"hutool\",\n                \"attributes\": {\n                    \"contribute_to_branch\": [\n                        \"v4-master\"\n                    ]\n                },\n                \"type\": \"blank\",\n                \"source\": {\n                    \"location\": \"https://github.com/looly/hutool.git\",\n                    \"type\": \"git\",\n                    \"parameters\": {}\n                },\n                \"path\": \"/hutool\",\n                \"problems\": [],\n                \"mixins\": [\n                    \"pullrequest\"\n                ]\n            }\n        ],\n        \"name\": \"create-from-api\",\n        \"attributes\": {},\n        \"description\": \"string\",\n        \"commands\": [\n            {\n                \"commandLine\": \"mvn clean install -f ${current.project.path}\",\n                \"name\": \"build\",\n                \"attributes\": {\n                    \"goal\": \"Build\",\n                    \"previewUrl\": \"\"\n                },\n                \"type\": \"mvn\"\n            },\n            {\n                \"commandLine\": \"echo \\\"hello\\\"\",\n                \"name\": \"newCustom\",\n                \"attributes\": {\n                    \"goal\": \"Run\",\n                    \"previewUrl\": \"\"\n                },\n                \"type\": \"custom\"\n            }\n        ],\n        \"links\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "stop workspace",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.0.1:8080/api/workspace/{workspaceid}/runtime",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"workspace",
+						"{workspaceid}",
+						"runtime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete workspace",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.0.1:8080/api/workspace/{workspaceid}",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"workspace",
+						"{workspaceid}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
