@@ -1,0 +1,248 @@
+"name": "create temp workspace with git",
+"request": {
+	"method": "POST",
+	"header": [
+		{
+			"key": "Content-Type",
+			"name": "Content-Type",
+			"value": "application/json",
+			"type": "text"
+		}
+	],
+	"url": {
+		"raw": "http://172.17.0.1:8080/api/workspace/runtime?temporary=true&attribute=stackId:java-default",
+		"protocol": "http",
+		"host": [
+			"172",
+			"17",
+			"0",
+			"1"
+		],
+		"port": "8080",
+		"path": [
+			"api",
+			"workspace",
+			"runtime"
+		],
+		"query": [
+			{
+				"key": "temporary",
+				"value": "true"
+			},
+			{
+				"key": "attribute",
+				"value": "stackId:java-default"
+			}
+		]
+	}
+},
+===========================================
+"request body": 
+{
+    "attributes": {
+    },
+    "description": "string",
+    "environments": {
+        "default": {
+            "recipe": {
+                "type": "dockerimage",
+                "content": "eclipse/ubuntu_jdk8"
+            },
+            "machines": {
+                "dev-machine": {
+                    "env": {},
+                    "servers": {
+                        "tomcat8-debug": {
+                            "attributes": {},
+                            "protocol": "http",
+                            "port": "8000"
+                        },
+                        "codeserver": {
+                            "attributes": {},
+                            "protocol": "http",
+                            "port": "9876"
+                        },
+                        "tomcat8": {
+                            "attributes": {},
+                            "protocol": "http",
+                            "port": "8080"
+                        }
+                    },
+                    "installers": [
+                        "org.eclipse.che.exec",
+                        "org.eclipse.che.terminal",
+                        "org.eclipse.che.ws-agent",
+                        "org.eclipse.che.ls.java"
+                    ],
+                    "volumes": {
+                        "m2": {
+                            "path": "/home/user/.m2"
+                        },
+                        "javadata": {
+                            "path": "/home/user/jdtls/data"
+                        }
+                    },
+                    "attributes": {
+                        "memoryLimitBytes": "2147483648"
+                    }
+                }
+            }
+        }
+    },
+    "projects": [
+        {
+            "source": {
+                "location": "https://github.com/looly/hutool.git",
+                "type": "git",
+                "parameters": {}
+            },
+            "links": [],
+            "problems": [],
+            "mixins": [
+                "pullrequest"
+            ],
+            "name": "hutool",
+            "type": "blank",
+            "path": "/hutool",
+            "attributes": {
+                "contribute_to_branch": [
+                    "v4-master"
+                ]
+            }
+        }
+    ],
+    "commands": [
+        {
+            "commandLine": "mvn clean install -f ${current.project.path}",
+            "name": "build",
+            "attributes": {
+                "goal": "Build",
+                "previewUrl": ""
+            },
+            "type": "mvn"
+        },
+        {
+            "commandLine": "echo \\"hello\\"",
+            "name": "newCustom",
+            "attributes": {
+                "goal": "Run",
+                "previewUrl": ""
+            },
+            "type": "custom"
+        }
+    ],
+    "defaultEnv": "default",
+    "name": "create-from-api",
+    "links": []
+}
+===========================================
+"response body": 
+{
+    "links": {
+        "self": "http://172.17.0.1:8080/api/workspace/workspace9plxkuuheudxmeqj",
+        "ide": "http://172.17.0.1:8080/che/create-from-api"
+    },
+    "attributes": {
+        "created": "1563514088385"
+    },
+    "namespace": "che",
+    "temporary": false,
+    "id": "workspace9plxkuuheudxmeqj",
+    "status": "STOPPED",
+    "config": {
+        "defaultEnv": "default",
+        "environments": {
+            "default": {
+                "machines": {
+                    "dev-machine": {
+                        "attributes": {
+                            "memoryLimitBytes": "2147483648"
+                        },
+                        "servers": {
+                            "tomcat8-debug": {
+                                "attributes": {},
+                                "port": "8000",
+                                "protocol": "http"
+                            },
+                            "codeserver": {
+                                "attributes": {},
+                                "port": "9876",
+                                "protocol": "http"
+                            },
+                            "tomcat8": {
+                                "attributes": {},
+                                "port": "8080",
+                                "protocol": "http"
+                            }
+                        },
+                        "volumes": {
+                            "m2": {
+                                "path": "/home/user/.m2"
+                            },
+                            "javadata": {
+                                "path": "/home/user/jdtls/data"
+                            }
+                        },
+                        "installers": [
+                            "org.eclipse.che.exec",
+                            "org.eclipse.che.terminal",
+                            "org.eclipse.che.ws-agent",
+                            "org.eclipse.che.ls.java"
+                        ],
+                        "env": {}
+                    }
+                },
+                "recipe": {
+                    "type": "dockerimage",
+                    "content": "eclipse/ubuntu_jdk8"
+                }
+            }
+        },
+        "projects": [
+            {
+                "links": [],
+                "name": "hutool",
+                "attributes": {
+                    "contribute_to_branch": [
+                        "v4-master"
+                    ]
+                },
+                "type": "blank",
+                "source": {
+                    "location": "https://github.com/looly/hutool.git",
+                    "type": "git",
+                    "parameters": {}
+                },
+                "path": "/hutool",
+                "problems": [],
+                "mixins": [
+                    "pullrequest"
+                ]
+            }
+        ],
+        "name": "create-from-api",
+        "attributes": {},
+        "description": "string",
+        "commands": [
+            {
+                "commandLine": "mvn clean install -f ${current.project.path}",
+                "name": "build",
+                "attributes": {
+                    "goal": "Build",
+                    "previewUrl": ""
+                },
+                "type": "mvn"
+            },
+            {
+                "commandLine": "echo \\"hello\\"",
+                "name": "newCustom",
+                "attributes": {
+                    "goal": "Run",
+                    "previewUrl": ""
+                },
+                "type": "custom"
+            }
+        ],
+        "links": []
+    }
+}
