@@ -5,7 +5,7 @@
 
 Eclipse Che 所需端口 8080, 5050, 32768-65535，其中官方文档可改。[Che官方文档如是说](https://www.eclipse.org/che/docs/che-6/docker-multi-user.html)
 
-RestAPI接口在<CHE_HOST>:<CHE_PORT>/api/swagger/ 下
+RestAPI接口在<CHE_HOST>:<CHE_PORT>/swagger/ 下
 
 ### 1. 发送创建Workspace的请求
 通过Post方式调用Restful API，创建Workspace。Workspace具体可分为两类：一类为持久化的Workspace，另一类为临时Workspace。持久化Workspace被停止后可保留，临时Workspace停止后被删除。临时Workspace不会显示在Web界面的Workspace列表中。
